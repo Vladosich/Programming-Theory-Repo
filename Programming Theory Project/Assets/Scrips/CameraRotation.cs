@@ -6,7 +6,7 @@ public class CameraRotation : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 0.2f;
 
-    [SerializeField] Vector3 currentRotation;
+    Vector3 currentRotation;
     Vector3 cameraRotationAngle = new Vector3 (0, 90, 0);
 
     private void Start()
@@ -16,10 +16,15 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Rotation(cameraRotationAngle)), rotationSpeed);
+        Rotation();
     }
 
-    Vector3 Rotation(Vector3 rotationAngle)
+    public void Rotation()
+    {
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(RotationCoordinates(cameraRotationAngle)), rotationSpeed);
+    }
+
+    Vector3 RotationCoordinates(Vector3 rotationAngle)
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -33,4 +38,5 @@ public class CameraRotation : MonoBehaviour
         }
         return currentRotation;
     }
+
 }
