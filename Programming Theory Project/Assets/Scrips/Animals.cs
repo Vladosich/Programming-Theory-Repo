@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Animals : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    float moveSpeed = 10f;
+    bool isMoving;
     
     private void Start()
     {
@@ -14,11 +15,35 @@ public class Animals : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            isMoving = true;
+        }
+        if (isMoving)
+        {
+            MoveForward();
+        }
+        else
+        {
+            LookAtCameraDirection();
+        }
         
     }
     private void MoveForward()
     {
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+    }
+    
+    void LookAtCameraDirection()
+    {
+        transform.rotation = Camera.main.transform.rotation;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Cat")
+        {
+            Debug.Log("!!!");
+        }
     }
 }
