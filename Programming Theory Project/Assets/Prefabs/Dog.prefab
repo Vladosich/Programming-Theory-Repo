@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 7569382433501471759}
   - component: {fileID: 7543808499879925461}
   - component: {fileID: 2248523424367322774}
-  - component: {fileID: 1512836230453039988}
+  - component: {fileID: -1797785180594025774}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Animal
@@ -495,7 +495,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1512836230453039988
+--- !u!114 &-1797785180594025774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -504,9 +504,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7630882968517702251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67c7ee1dbeb9c7d4cbe38d1dd16a82ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 25fcae3f1f477dd479d5a83ff84f0973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &7630918363743537039
 GameObject:
   m_ObjectHideFlags: 0

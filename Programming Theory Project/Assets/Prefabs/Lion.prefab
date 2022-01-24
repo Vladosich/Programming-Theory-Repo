@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 8822081757717287454}
   - component: {fileID: 313817186852976009}
   - component: {fileID: 8922577257209743178}
-  - component: {fileID: -6442732933023829330}
+  - component: {fileID: 2328754381348637002}
   m_Layer: 0
   m_Name: Lion
   m_TagString: Animal
@@ -413,7 +413,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-6442732933023829330
+--- !u!114 &2328754381348637002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,9 +422,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8828130922188643096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67c7ee1dbeb9c7d4cbe38d1dd16a82ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 40a16248a192f784387730bd2b0c3e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &8828144793214115788
 GameObject:
   m_ObjectHideFlags: 0

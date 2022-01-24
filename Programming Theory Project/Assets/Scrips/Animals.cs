@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Animals : MonoBehaviour
 {
-    float moveSpeed = 10f;
-    bool isMoving;
+    private float moveSpeed = 10f;
+    private bool isMoving;
+
+    public GameManager gameManagerScript;
+    public GameObject gameManager;
+    
     
     private void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager");
+        gameManagerScript = gameManager.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -38,12 +43,11 @@ public class Animals : MonoBehaviour
     {
         transform.rotation = Camera.main.transform.rotation;
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    protected void UpdateScore()
     {
-        if(other.gameObject.name == "Cat")
-        {
-            Debug.Log("!!!");
-        }
+        gameManagerScript.score++;
+        gameManagerScript.scoreText.text = "Score: " + gameManagerScript.score;
     }
+
 }

@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 2422942608411104529}
   - component: {fileID: 2314147804304650839}
   - component: {fileID: -6960404159065149307}
-  - component: {fileID: -69500507976187769}
+  - component: {fileID: 6157670348662910747}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Animal
@@ -410,7 +410,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-69500507976187769
+--- !u!114 &6157670348662910747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -419,6 +419,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2373975352519712573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67c7ee1dbeb9c7d4cbe38d1dd16a82ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 246c60acd85a97248806cdc3f6da020e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 0}
+  gameManager: {fileID: 0}
