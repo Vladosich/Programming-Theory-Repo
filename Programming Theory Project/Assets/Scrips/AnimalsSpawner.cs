@@ -5,10 +5,14 @@ using UnityEngine;
 public class AnimalsSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] animals;
+
+    public GameManager gameManagerScript;
+    public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager");
+        gameManagerScript = gameManager.GetComponent<GameManager>();
     }
 
     // Update is called once per frame

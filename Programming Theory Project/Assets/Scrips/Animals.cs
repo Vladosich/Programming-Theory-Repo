@@ -44,10 +44,6 @@ public class Animals : MonoBehaviour
         transform.rotation = Camera.main.transform.rotation;
     }
     
-    protected void UpdateScore()
-    {
-        gameManagerScript.score++;
-        gameManagerScript.scoreText.text = "Score: " + gameManagerScript.score;
-    }
+    
 
 }

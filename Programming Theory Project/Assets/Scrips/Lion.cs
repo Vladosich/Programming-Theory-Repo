@@ -8,11 +8,11 @@ public class Lion : Animals
     {
         if (other.gameObject.name == "Lion")
         {
-            UpdateScore();
+            gameManagerScript.UpdateScore();
         }
         else
         {
-            Debug.Log("u lose");
+            gameManagerScript.GameOver();
         }
 
     }
