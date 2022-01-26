@@ -18,7 +18,7 @@ public class AnimalsSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameObject.FindWithTag("Animal"))
+        if (!GameObject.FindWithTag("Animal") && gameManagerScript.isGameActive)
         {
             SpawnRandomAnimal();
         }

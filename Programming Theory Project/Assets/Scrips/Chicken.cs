@@ -10,6 +10,10 @@ public class Chicken : Animals
         {
             gameManagerScript.UpdateScore();
         }
+        else if (other.gameObject.name == "Terrain")
+        {
+
+        }
         else
         {
             gameManagerScript.GameOver();
