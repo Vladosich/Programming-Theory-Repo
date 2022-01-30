@@ -7,22 +7,40 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int score;
-    public bool isGameActive;
+    private int score;
+    public int Score
+    {
+        get
+        {
+            return score;
+        }
+        set
+        {
+            if (value < 0)
+            {
+                score = 0;
+                return;
+            }
+            score = value;
+        }
+
+    }
+    private bool isGameActive;
+    public bool IsGameActive { get; set; }
 
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI gameOverText;
+    public GameObject gameOverText;
 
 
     void Start()
     {
-        isGameActive = true;
+        IsGameActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isGameActive && Input.GetKeyDown(KeyCode.R))
+        if (!IsGameActive && Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
         }
@@ -30,14 +48,14 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        score++;
-        scoreText.text = "Score: " + score;
+        Score++;
+        scoreText.text = "Score: " + Score;
     }
 
     public void GameOver()
     {
-        isGameActive = false;
-        gameOverText.gameObject.SetActive(true);
+        IsGameActive = false;
+        gameOverText.SetActive(true);
     }
     
     public void RestartGame()

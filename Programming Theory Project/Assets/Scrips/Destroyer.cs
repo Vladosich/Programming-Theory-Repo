@@ -6,7 +6,7 @@ public class Destroyer : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Animal")
+        if (other.gameObject.CompareTag("Animal"))
         {
             Destroy(other.gameObject);
         }

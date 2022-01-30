@@ -377,8 +377,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.72}
-  m_Center: {x: 0, y: 0.52, z: 0.15}
+  m_Size: {x: 0.7113461, y: 1, z: 1.4703956}
+  m_Center: {x: 0.024366846, y: 0.52, z: 0.27479976}
 --- !u!54 &313817186852976009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 0}
-  gameManager: {fileID: 0}
+  cameraRotationScript: {fileID: 0}
 --- !u!82 &-2320398728532421273
 AudioSource:
   m_ObjectHideFlags: 0

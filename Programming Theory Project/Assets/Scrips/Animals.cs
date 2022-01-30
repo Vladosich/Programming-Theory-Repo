@@ -6,21 +6,22 @@ public class Animals : MonoBehaviour
 {
     private float moveSpeed = 10f;
     private bool isMoving;
+    
 
     public GameManager gameManagerScript;
-    public GameObject gameManager;
+    public CameraRotation cameraRotationScript;
     
     
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager");
-        gameManagerScript = gameManager.GetComponent<GameManager>();
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManager>();
+        cameraRotationScript = GameObject.Find("Main Camera").GetComponent<CameraRotation>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space) && cameraRotationScript.TimeDelay < 0) 
         {
             isMoving = true;
         }

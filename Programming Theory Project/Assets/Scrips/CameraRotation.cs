@@ -4,18 +4,31 @@ using UnityEngine;
 
 public class CameraRotation : MonoBehaviour
 {
-    [SerializeField] float rotationSpeed = 0.2f;
-
-    Vector3 currentRotation;
-    Vector3 cameraRotationAngle = new Vector3 (0, 90, 0);
-
-    private void Start()
-    {
-
+    [SerializeField] private float rotationSpeed = 0.2f;
+    [SerializeField] private float timeDelay;
+    public float TimeDelay 
+    { 
+        get 
+        {
+            return timeDelay;
+        } 
+        set 
+        { 
+            if (value < 0) 
+            { 
+                timeDelay = 0.3f; 
+                return; 
+            } 
+            timeDelay = value; 
+        } 
     }
-    // Update is called once per frame
+    
+    private Vector3 currentRotation;
+    private Vector3 cameraRotationAngle = new Vector3 (0, 90, 0);
+
     void Update()
     {
+        timeDelay -= Time.deltaTime;
         Rotation();
     }
 
@@ -29,11 +42,13 @@ public class CameraRotation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             currentRotation += rotationAngle;
+            TimeDelay = 0.3f;
             return currentRotation;
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             currentRotation -= rotationAngle;
+            TimeDelay = 0.3f;
             return currentRotation;
         }
         return currentRotation;
