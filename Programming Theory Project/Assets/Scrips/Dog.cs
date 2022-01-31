@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dog : Animals
 {
-    private void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Dog")
         {
@@ -18,6 +18,5 @@ public class Dog : Animals
         {
             gameManagerScript.GameOver();
         }
-
     }
 }

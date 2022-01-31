@@ -40,11 +40,23 @@ public class Animals : MonoBehaviour
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
     
-    void LookAtCameraDirection()
+    private void LookAtCameraDirection()
     {
         transform.rotation = Camera.main.transform.rotation;
     }
-    
-    
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Terrain")
+        {
+
+        }
+        else
+        {
+            gameManagerScript.GameOver();
+        }
+    }
+
+
 
 }

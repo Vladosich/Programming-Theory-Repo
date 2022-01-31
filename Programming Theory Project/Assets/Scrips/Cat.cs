@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cat : Animals
 {
-    private void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "Cat")
         {
